@@ -55,16 +55,16 @@ let mapWidget = document.getElementById('map')
 let shopChoice = document.getElementById('selectshop')
 
 function button() {
-	shopChoice = shopChoice.value
+	shop = shopChoice.value
 	let iframe = document.getElementById('map-widget')
-	iframe.src = shop[shopChoice]
+	iframe.src = shop[shop]
 	tg.MainButton.show()
 }
 
 
 
 Telegram.WebApp.onEvent('mainButtonClicked', function () { //тут сообщение отправляется в тг
-	shopChoice = shopChoice.value
+	shop = shopChoice.value
 	time = document.getElementById('getorder-time').value
  	comment = document.getElementById('comment').value
 	if (!shop) {
@@ -76,6 +76,6 @@ Telegram.WebApp.onEvent('mainButtonClicked', function () { //тут сообще
 		return
 	}
 	if (!comment) {comment = 'Без комментариев'}
-	tg.sendData(`${shopChoice}|${time}|${comment}`)
+	tg.sendData(`${shop}|${time}|${comment}`)
 	
 })

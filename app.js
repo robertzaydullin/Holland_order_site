@@ -65,6 +65,7 @@ function button() {
 
 Telegram.WebApp.onEvent('mainButtonClicked', function () { //тут сообщение отправляется в тг
 	shop_code = shopChoice.value
+	shop_label = shopChoice.label
 	time = document.getElementById('getorder-time').value
  	comment = document.getElementById('comment').value
 	if (!shop) {
@@ -76,6 +77,6 @@ Telegram.WebApp.onEvent('mainButtonClicked', function () { //тут сообще
 		return
 	}
 	if (!comment) {comment = 'Без комментариев'}
-	tg.sendData(`${shop_code}|${time}|${comment}`)
+	tg.sendData(`${shop_code}|${time}|${comment}|${shop_label}`)
 	
 })

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+	<div>
+		<from name="seldiv">
+			<label>Выберите магазин</label>
+			<select name="shops" id="selectshop">
+				<option disabled selected value> -- выберите из вариантов -- </option>
+				<optgroup label="Казань, Вахитовский район">
+					<option value="БАУ">ул. Баумана, 38/17</option>
+					<option value="ВИШ">ул. Вишневского, 14</option>
+					<option value="ГОР">ул. Горького, 29/19</option>
+					<option value="ДОС">ул. Достоевского, 50</option>
+					<option value="КЛН">ул. Калинина, 52</option>
+					<option value="МРС">ул. Карла Маркса, 59</option>
+					<option value="ПШК">ул. Пушкина, 5</option>
+					<option value="ТАТ">ул. Татарстан, 16</option>
+					<option value="УНИ">ул. Университетская, 22</option>
+					<option value="ЧЕХ">ул. Чехова, 2</option>
+					<option value="ЯПЕ">ул. Япеева, 9/7</option>
+				</optgroup>
+				<optgroup label="Казань, Советский район">
+					<option value="БИГ">ул. Бигичева,3</option>
+					<option value="ГВА">ул. Гвардейская, 20</option>
+					<option value="ГУБ">ул. Губкина, 13</option>
+					<option value="Д40">ул. Даурская, 40</option>
+					<option value="ЕРШ">ул. Николая Ершова, 78Б</option>
+					<option value="КОС">ул. Космонавтов, 1А</option>
+					<option value="ЛОМ">ул. Ломжинская, 17/1</option>
+					<option value="ПИО">ул. Пионерская, 5/9</option>
+					<option value="ПОБ">просп. Победы, 100</option>
+					<option value="САХ">ул. Академика Сахарова, 12</option>
+					<option value="СИБ">ул. Сибирский Тракт, 16</option>
+					<option value="Ф106">ул. Юлиуса Фучика, 106А</option>
+				</optgroup>
+				<optgroup label="Казань, Приволжский район">
+					<option value="ПАВ">ул. Павлюхина, 99</option>
+					<option value="ПАР">Парина, 6</option>
+					<option value="ЗОР">ул. Рихарда Зорге, 101</option>
+					<option value="ФУЧ">ул. Юлиуса Фучика, 72</option>
+				</optgroup>
+				<optgroup label="Казань, Ново-Савиновский район">
+					<option value="АМИ">ул. Ф. Амирхана, 10</option>
+					<option value="САВ">просп. Ямашева, 93, корп. 1</option>
+					<option value="Ч15">ул. Чистопольская, 15</option>
+					<option value="ЧЕТ">ул. Четаева, 35</option>
+				</optgroup>
+				<optgroup label="Казань, Московский район">
+					<option value="ВОС">ул. ​Восстания, 83а</option>
+					<option value="ГАГ">ул. Гагарина, 83</option>
+					<option value="ДЕК">ул. Декабристов, 85Б, корп. 1</option>
+					<option value="МСК">ул. Декабристов, 150А</option>
+					<option value="ЧИС">ул. Чистопольская, 3</option>
+				</optgroup>
+				<optgroup label="Казань, Авиастроительный район">
+					<option value="БЕЛ">ул. Белинского, 5А</option>
+					<option value="ЛЕН">ул. Ленинградская, 23</option>
+					<option value="ЛУК">ул. Лукина, 11Б</option>
+					<option value="МАК">ул. Максимова, 50</option>
+				</optgroup>
+			</select>
+			<button type="submit" class="btn btn-success" id="submit" onclick="button();">Выбрать</button>
+		</from>
+	</div>
+
+	<div class="container" id=map>
+		<div style="position:relative;overflow:hidden;">
+		<a href="https://yandex.ru/maps/43/kazan/search/Holland/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Holland в Казани</a>
+		<a href="https://yandex.ru/maps/43/kazan/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Казань</a>
+		<iframe id="map-widget" src="https://yandex.ru/map-widget/v1/?display-text=Holland&filter=chain_id%3A190469064514&from=mapframe&ll=49.110001%2C55.792368&mode=search&sctx=ZAAAAAgBEAAaKAoSCTjZBu5AmUhAEXi13JkJ5ktAEhIJC7Q7pBgg0T8RumkzTkNUtT8iBgABAgMEBSgAOABAjJ0GSAFqAnJ1ggEVY2hhaW5faWQ6MTkwNDY5MDY0NTE0nQHNzEw9oAEAqAEAvQHhRRUKwgGTAdPQkcaZBtb7qdv3AZOpgYfrAt6w3LKpBvaI97oF5Pi1muEEic76yJQGpuqalYEDqtv%2F7v8Busu08YwCw%2FXrobEG7rHYj6ADgYTr1O4D2svUpfUG042K2rEF1Z6Gp78Ch8jY85YBo%2FbAxqQD2pv%2FhVfEn8ivyQTg3aCd1Abf%2FLGRogKLjNqQBvqJoqa2BujX3ui6BuoBAPIBAPgBAIICFWNoYWluX2lkOjE5MDQ2OTA2NDUxNIoCAJICAJoCDGRlc2t0b3AtbWFwc6oCRjE5MDQ2OTA2NDUxNCwxMjEzNDI1Nzk1NCw4OTI1Nzc5NTcsNTMzMTc5NjM0MzgsODkzNzg3ODU5MSwyMzI0MzUzMzkwMDewAgE%3D&sll=49.110001%2C55.792368&sspn=0.232945%2C0.072523&text=%7B%22text%22%3A%22Holland%22%2C%22what%22%3A%5B%7B%22attr_name%22%3A%22chain_id%22%2C%22attr_values%22%3A%5B%22190469064514%22%5D%7D%5D%7D&z=12" width="390" height="300" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+	</div>
+	<div>
+    		<label for="getorder-time">Выберите время получения :</label>
+		<input type="datetime-local" id="getorder-time" name="getorder-time">
+	</div>
+	<div>
+        	<label for="name">Оставьте ваш комментарий к заказу:</label>
+        	<input type="text" id="comment" name="name">
+	</div>
+
+</body>
+
+<script src="app.js"></script>
+
+
+</html>

@@ -54,7 +54,7 @@ let shop = {
 let mapWidget = document.getElementById('map')
 let shopChoice = document.getElementById('selectshop')
 
-function button() {
+function changeShop() {
 	shop_code = shopChoice.value
 	let iframe = document.getElementById('map-widget')
 	iframe.src = shop[shop_code]

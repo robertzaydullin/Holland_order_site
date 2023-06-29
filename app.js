@@ -65,7 +65,7 @@ function changeShop() {
 
 Telegram.WebApp.onEvent('mainButtonClicked', function () { //тут сообщение отправляется в тг
 	shop_code = shopChoice.value
-	shop_label = shopChoice.label
+	shop_label = shopChoice.innerText
 	time = document.getElementById('getorder-time').value
  	comment = document.getElementById('comment').value
 	if (!shop) {

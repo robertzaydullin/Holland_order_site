@@ -5,7 +5,8 @@ tg.expand();
 tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
 
-let item = '';
+let timeChoise = document.getElementById('getorder-time')
+timeChoise.min = new Date().toISOString().slice(0, -8)
 
 let shop = {
 	'АМИ': 'https://yandex.ru/map-widget/v1/?filter=chain_id%3A190469064514&indoorLevel=1&ll=49.133510%2C55.829140&mode=search&oid=122257767856&ol=biz&sll=49.133510%2C55.829140&text=holland&z=16',
@@ -65,7 +66,7 @@ function changeShop() {
 
 Telegram.WebApp.onEvent('mainButtonClicked', function () { //тут сообщение отправляется в тг
 	shop_code = shopChoice.value
-	time = document.getElementById('getorder-time').value
+	time = timeChoise.value
  	comment = document.getElementById('comment').value
 	if (!shop) {
 		alert('Выберите магазин из списка и нажмите "Выбрать"')

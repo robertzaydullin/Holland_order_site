@@ -69,7 +69,11 @@ p#shopname {
     padding: .25rem .25rem .25rem .25rem;
     margin-left: 10%;
     max-width: 200px;
-    font-size: 8px;
+    font-size: 14px;
     background: none;
     border-radius: 3px
+}
+
+.styled-select optgroup{
+    font-size: 8px;
 }

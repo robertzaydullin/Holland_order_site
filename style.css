@@ -64,3 +64,22 @@ p#shopname {
     max-width: 390px;
 }
 
+.select{
+    width: 100%;
+    padding: .25rem .25rem .25rem .25rem;
+    margin-left: 10%;
+    max-width: 200px;
+    font-size: 12px;
+    background: none;
+    border-radius: 3px
+}
+
+.option {
+    width: 100%;
+    padding: .25rem .25rem .25rem .25rem;
+    margin-left: 20%;
+    max-width: 200px;
+    font-size: 12px;
+    background: none;
+    border-radius: 3px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+</head>
+<body>
+	<div>
+		<p>Выберите магазин из списка</p>
+		<from name="seldiv">
+			<select name="shops" id="selectshop" onchange="changeShop()">
+				<option disabled selected value> -- выберите из вариантов -- </option>
+				<optgroup label="Казань, Вахитовский район">
+					<option value="БАУ">ул. Баумана, 38/17</option>
+					<option value="ВИШ">ул. Вишневского, 14</option>
+					<option value="ГОР">ул. Горького, 29/19</option>
+					<option value="ДОС">ул. Достоевского, 50</option>
+					<option value="КЛН">ул. Калинина, 52</option>
+					<option value="МРС">ул. Карла Маркса, 59</option>
+					<option value="ПШК">ул. Пушкина, 5</option>
+					<option value="ТАТ">ул. Татарстан, 16</option>
+					<option value="УНИ">ул. Университетская, 22</option>
+					<option value="ЧЕХ">ул. Чехова, 2</option>
+					<option value="ЯПЕ">ул. Япеева, 9/7</option>
+				</optgroup>
+				<optgroup label="Казань, Советский район">
+					<option value="БИГ">ул. Бигичева,3</option>
+					<option value="ГВА">ул. Гвардейская, 20</option>
+					<option value="ГУБ">ул. Губкина, 13</option>
+					<option value="Д40">ул. Даурская, 40</option>
+					<option value="ЕРШ">ул. Николая Ершова, 78Б</option>
+					<option value="КОС">ул. Космонавтов, 1А</option>
+					<option value="ЛОМ">ул. Ломжинская, 17/1</option>
+					<option value="ПИО">ул. Пионерская, 5/9</option>
+					<option value="ПОБ">просп. Победы, 100</option>
+					<option value="САХ">ул. Академика Сахарова, 12</option>
+					<option value="СИБ">ул. Сибирский Тракт, 16</option>
+					<option value="Ф106">ул. Юлиуса Фучика, 106А</option>
+				</optgroup>
+				<optgroup label="Казань, Приволжский район">
+					<option value="ПАВ">ул. Павлюхина, 99</option>
+					<option value="ПАР">Парина, 6</option>
+					<option value="ЗОР">ул. Рихарда Зорге, 101</option>
+					<option value="ФУЧ">ул. Юлиуса Фучика, 72</option>
+				</optgroup>
+				<optgroup label="Казань, Ново-Савиновский район">
+					<option value="АМИ">ул. Ф. Амирхана, 10</option>
+					<option value="САВ">просп. Ямашева, 93, корп. 1</option>
+					<option value="Ч15">ул. Чистопольская, 15</option>
+					<option value="ЧЕТ">ул. Четаева, 35</option>
+				</optgroup>
+				<optgroup label="Казань, Московский район">
+					<option value="ВОС">ул. ​Восстания, 83а</option>
+					<option value="ГАГ">ул. Гагарина, 83</option>
+					<option value="ДЕК">ул. Декабристов, 85Б, корп. 1</option>
+					<option value="МСК">ул. Декабристов, 150А</option>
+					<option value="ЧИС">ул. Чистопольская, 3</option>
+				</optgroup>
+				<optgroup label="Казань, Авиастроительный район">
+					<option value="БЕЛ">ул. Белинского, 5А</option>
+					<option value="ЛЕН">ул. Ленинградская, 23</option>
+					<option value="ЛУК">ул. Лукина, 11Б</option>
+					<option value="МАК">ул. Максимова, 50</option>
+				</optgroup>
+			</select>
+		</from>
+	</div>
+
+    	<div id="map" style="width:320px; height:400px"></div>
+
+	<div class="container" id=block>
+		<div>
+	    		<p>Выберите желаемую дату и время получеия заказа</p>
+			<input type="datetime-local" id="getorder-time" name="getorder-time">
+		</div>
+		<div>
+	        	<p>Оставьте комментарий к заказу, это поможет лучше понять ваш заказ</p>
+	        	<input type="text" id="comment" name="name">
+		</div>
+	</div>
+</body>
+
+<script src="app.js"></script>
+
+
+</html>

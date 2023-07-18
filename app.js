@@ -158,6 +158,6 @@ Telegram.WebApp.onEvent('mainButtonClicked', function () { //тут сообще
 		return
 	}
 	if (!comment) {comment = 'Без комментариев'}
-	tg.sendData(`${shop_code}|${time}|${comment}|${shop_code}`)
+	tg.sendData(`${shop_code}|${time}|${comment}`)
 	
 })

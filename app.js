@@ -94,8 +94,8 @@ DG.then(function () {
 
 	shopChoice.onchange = function changeShop () {
 		map.setView(center=shops[shopChoice.value][0], zoom=16)
-	tg.MainButton.show()
-}
+		timeChoice.focus()
+	}
 
 
 
@@ -143,7 +143,7 @@ DG.then(function () {
 })
 
 
-
+timeChoice.onchange = function changeTime () {tg.MainButton.show()}
 
 
 

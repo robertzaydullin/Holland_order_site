@@ -95,7 +95,7 @@ DG.then(function () {
 
    findButton.onclick = function() {myLocation};
 
-   myLocation = map.locate({setView: true, watch: true})
+   myLocation = map.locate({setView: false, watch: true})
    		.on('locationfound', function(e) {
 	   		DG.marker([e.latitude, e.longitude]).addTo(map);
    			})

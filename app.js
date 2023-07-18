@@ -103,6 +103,7 @@ DG.then(function () {
 	DG.marker(shops['ПШК'][0])
 		.on('click', function() {
 			shopChoice.value = 'ПШК'
+			tg.MainButton.show()
 		})
 		.addTo(map)
 		.bindLabel(shops['ПШК'][1])
@@ -110,6 +111,7 @@ DG.then(function () {
 	DG.marker(shops['САВ'][0])
 		.on('click', function() {
 			shopChoice.value = 'САВ'
+			tg.MainButton.show()
 		})
 		.addTo(map)
 		.bindLabel(shops['САВ'][1])
@@ -117,6 +119,7 @@ DG.then(function () {
 	DG.marker(shops['АМИ'][0])
 		.on('click', function() {
 			shopChoice.value = 'АМИ'
+			tg.MainButton.show()
 		})
 		.addTo(map)
 		.bindLabel(shops['АМИ'][1])
@@ -132,6 +135,7 @@ DG.then(function () {
 	DG.marker(shops['СЛВ'][0])
 		.on('click', function() {
 			shopChoice.value = 'СЛВ'
+			tg.MainButton.show()
 		})
 		.addTo(map)
 		.bindLabel(shops['СЛВ'][1])
@@ -150,7 +154,7 @@ Telegram.WebApp.onEvent('mainButtonClicked', function () { //тут сообще
 	time = timeChoise.value
  	comment = document.getElementById('comment').value
 	if (!time) {
-		alert('Выберите желаемое время получения заказа"')
+		alert('Поле выбора времени пустое!')
 		return
 	}
 	if (!comment) {comment = 'Без комментариев'}

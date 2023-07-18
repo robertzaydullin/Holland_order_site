@@ -94,7 +94,7 @@ DG.then(function () {
 
 	shopChoice.onchange = function changeShop () {
 		map.setView(center=shops[shopChoice.value][0], zoom=16)
-		timeChoice.focus()
+		timeChoice.style.backgroundColor = "#FDFF47"
 	}
 
 

@@ -98,359 +98,424 @@ DG.then(function () {
 
 	shopChoise.onchange = function changeShop () {
 		map.setView(center=shops[shopChoise.value][0], zoom=16)
-		timeChoise.style.backgroundColor = "#FDFF47"
+		
+		DG.popup()
+            .setLatLng(shops[shopChoise.value][0])
+            .setContent(shops[shopChoise.value][1])
+			.openOn(map)
+		
+		blink(timeChoise)
 	}
 
 
 	DG.marker(shops['АМИ'][0])
 		.on('click', function() {
 			shopChoise.value = 'АМИ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['АМИ'][1])
+		.bindPopup(shops['АМИ'][1])
 
 	DG.marker(shops['БАУ'][0])
 		.on('click', function() {
 			shopChoise.value = 'БАУ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['БАУ'][1])
+		.bindPopup(shops['БАУ'][1])
 
 	DG.marker(shops['БЕЛ'][0])
 		.on('click', function() {
 			shopChoise.value = 'БЕЛ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['БЕЛ'][1])
+		.bindPopup(shops['БЕЛ'][1])
 
 	DG.marker(shops['БИГ'][0])
 		.on('click', function() {
 			shopChoise.value = 'БИГ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['БИГ'][1])
+		.bindPopup(shops['БИГ'][1])
 
 	DG.marker(shops['ВИШ'][0])
 		.on('click', function() {
 			shopChoise.value = 'ВИШ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ВИШ'][1])
+		.bindPopup(shops['ВИШ'][1])
 
 	DG.marker(shops['ВОС'][0])
 		.on('click', function() {
 			shopChoise.value = 'ВОС'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ВОС'][1])
+		.bindPopup(shops['ВОС'][1])
 
 	DG.marker(shops['ГАГ'][0])
 		.on('click', function() {
 			shopChoise.value = 'ГАГ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ГАГ'][1])
+		.bindPopup(shops['ГАГ'][1])
 
 	DG.marker(shops['ГВА'][0])
 		.on('click', function() {
 			shopChoise.value = 'ГВА'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ГВА'][1])
+		.bindPopup(shops['ГВА'][1])
 
 	DG.marker(shops['ГОР'][0])
 		.on('click', function() {
 			shopChoise.value = 'ГОР'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ГОР'][1])
+		.bindPopup(shops['ГОР'][1])
 
 	DG.marker(shops['ГУБ'][0])
 		.on('click', function() {
 			shopChoise.value = 'ГУБ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ГУБ'][1])
+		.bindPopup(shops['ГУБ'][1])
 
 	DG.marker(shops['Д40'][0])
 		.on('click', function() {
 			shopChoise.value = 'Д40'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['Д40'][1])
+		.bindPopup(shops['Д40'][1])
 		
 	DG.marker(shops['ДЕК'][0])
 		.on('click', function() {
 			shopChoise.value = 'ДЕК'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ДЕК'][1])
+		.bindPopup(shops['ДЕК'][1])
 	
 	DG.marker(shops['ДОС'][0])
 		.on('click', function() {
 			shopChoise.value = 'ДОС'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ДОС'][1])
+		.bindPopup(shops['ДОС'][1])
 	
 	DG.marker(shops['ЕРШ'][0])
 		.on('click', function() {
 			shopChoise.value = 'ЕРШ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ЕРШ'][1])
+		.bindPopup(shops['ЕРШ'][1])
 
 	DG.marker(shops['ЗОР'][0])
 		.on('click', function() {
 			shopChoise.value = 'ЗОР'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ЗОР'][1])
+		.bindPopup(shops['ЗОР'][1])
 
 	DG.marker(shops['КЛН'][0])
 		.on('click', function() {
 			shopChoise.value = 'КЛН'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['КЛН'][1])
+		.bindPopup(shops['КЛН'][1])
 
 	DG.marker(shops['КОС'][0])
 		.on('click', function() {
 			shopChoise.value = 'КОС'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['КОС'][1])
+		.bindPopup(shops['КОС'][1])
 	
 	DG.marker(shops['ЛЕН'][0])
 		.on('click', function() {
 			shopChoise.value = 'ЛЕН'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ЛЕН'][1])
+		.bindPopup(shops['ЛЕН'][1])
 
 	DG.marker(shops['ЛОМ'][0])
 		.on('click', function() {
 			shopChoise.value = 'ЛОМ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ЛОМ'][1])
+		.bindPopup(shops['ЛОМ'][1])
 
 	DG.marker(shops['ЛУК'][0])
 		.on('click', function() {
 			shopChoise.value = 'ЛУК'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ЛУК'][1])
+		.bindPopup(shops['ЛУК'][1])
 
 	DG.marker(shops['МАК'][0])
 		.on('click', function() {
 			shopChoise.value = 'МАК'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['МАК'][1])
+		.bindPopup(shops['МАК'][1])
 	
 	DG.marker(shops['МРС'][0])
 		.on('click', function() {
 			shopChoise.value = 'МРС'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['МРС'][1])
+		.bindPopup(shops['МРС'][1])
 
 	DG.marker(shops['МСК'][0])
 		.on('click', function() {
 			shopChoise.value = 'МСК'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['МСК'][1])
+		.bindPopup(shops['МСК'][1])
 
 	DG.marker(shops['ПАВ'][0])
 		.on('click', function() {
 			shopChoise.value = 'ПАВ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ПАВ'][1])
+		.bindPopup(shops['ПАВ'][1])
 	
 	DG.marker(shops['ПАР'][0])
 		.on('click', function() {
 			shopChoise.value = 'ПАР'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ПАР'][1])
+		.bindPopup(shops['ПАР'][1])
 	
 	DG.marker(shops['ПИО'][0])
 		.on('click', function() {
 			shopChoise.value = 'ПИО'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ПИО'][1])
+		.bindPopup(shops['ПИО'][1])
 	
 	DG.marker(shops['ПОБ'][0])
 		.on('click', function() {
 			shopChoise.value = 'ПОБ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ПОБ'][1])
+		.bindPopup(shops['ПОБ'][1])
 	
 	DG.marker(shops['ПШК'][0])
 		.on('click', function() {
 			shopChoise.value = 'ПШК'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ПШК'][1])
+		.bindPopup(shops['ПШК'][1])
 
 	DG.marker(shops['САВ'][0])
 		.on('click', function() {
 			shopChoise.value = 'САВ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['САВ'][1])
+		.bindPopup(shops['САВ'][1])
 	
 	DG.marker(shops['САХ'][0])
 		.on('click', function() {
 			shopChoise.value = 'САХ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['САХ'][1])
+		.bindPopup(shops['САХ'][1])
 	
 	DG.marker(shops['СИБ'][0])
 		.on('click', function() {
 			shopChoise.value = 'СИБ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['СИБ'][1])
+		.bindPopup(shops['СИБ'][1])
 
 	DG.marker(shops['СЛВ'][0])
 		.on('click', function() {
 			shopChoise.value = 'СЛВ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['СЛВ'][1])
+		.bindPopup(shops['СЛВ'][1])
 	
 	DG.marker(shops['ТАТ'][0])
 		.on('click', function() {
 			shopChoise.value = 'ТАТ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ТАТ'][1])
+		.bindPopup(shops['ТАТ'][1])
 	
 	DG.marker(shops['УНИ'][0])
 		.on('click', function() {
 			shopChoise.value = 'УНИ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['УНИ'][1])
+		.bindPopup(shops['УНИ'][1])
 	
 	DG.marker(shops['Ф106'][0])
 		.on('click', function() {
 			shopChoise.value = 'Ф106'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['Ф106'][1])
+		.bindPopup(shops['Ф106'][1])
 	
 	DG.marker(shops['ФУЧ'][0])
 		.on('click', function() {
 			shopChoise.value = 'ФУЧ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ФУЧ'][1])
+		.bindPopup(shops['ФУЧ'][1])
 		
 	DG.marker(shops['Ч15'][0])
 		.on('click', function() {
 			shopChoise.value = 'Ч15'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['Ч15'][1])
+		.bindPopup(shops['Ч15'][1])
 	
 	DG.marker(shops['ЧЕТ'][0])
 		.on('click', function() {
 			shopChoise.value = 'ЧЕТ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ЧЕТ'][1])
+		.bindPopup(shops['ЧЕТ'][1])
 	
 	DG.marker(shops['ЧЕХ'][0])
 		.on('click', function() {
 			shopChoise.value = 'ЧЕХ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ЧЕХ'][1])
+		.bindPopup(shops['ЧЕХ'][1])
 
 	DG.marker(shops['ЧИС'][0])
 		.on('click', function() {
 			shopChoise.value = 'ЧИС'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ЧИС'][1])
+		.bindPopup(shops['ЧИС'][1])
 	
 	DG.marker(shops['ЯПЕ'][0])
 		.on('click', function() {
 			shopChoise.value = 'ЯПЕ'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ЯПЕ'][1])
+		.bindPopup(shops['ЯПЕ'][1])
 	
 	DG.marker(shops['Д11'][0])
 		.on('click', function() {
 			shopChoise.value = 'Д11'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['Д11'][1])
+		.bindPopup(shops['Д11'][1])
 
 	DG.marker(shops['ЧЕТ20'][0])
 		.on('click', function() {
 			shopChoise.value = 'ЧЕТ20'
-			tg.MainButton.show()
+			map.setView(center=shops[shopChoise.value][0], map.getZoom())
+			blink(timeChoise)
 		})
 		.addTo(map)
-		.bindLabel(shops['ЧЕТ20'][1])
+		.bindPopup(shops['ЧЕТ20'][1])
 })
+
+function blink(element){
+
+	element.style.backgroundColor = "#FFFFFF"
+	setTimeout(function() {
+	element.style.backgroundColor = "#FDFF47"
+	}, 500)
+	setTimeout(function() {
+	element.style.backgroundColor = "#FFFFFF"
+	}, 1000)
+	setTimeout(function() {
+	element.style.backgroundColor = "#FDFF47"
+	}, 1500)
+
+}
+
 
 
 timeChoise.onchange = function changeTime () {
 	timeChoise.style.backgroundColor = "#FFFFFF"
-	commentChoise.style.backgroundColor = "#FDFF47"
+	blink(commentChoise)
 	tg.MainButton.show()
 }
 

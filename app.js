@@ -1,9 +1,10 @@
 let tg = window.Telegram.WebApp;
 
+tg.expand()
+
 let mapWidget = document.getElementById('map')
 let shopChoice = document.getElementById('selectshop')
 
-tg.expand();
 
 tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';

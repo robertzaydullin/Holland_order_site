@@ -146,14 +146,9 @@ DG.then(function () {
 
 
 Telegram.WebApp.onEvent('mainButtonClicked', function () { //тут сообщение отправляется в тг
-	alert('here')
 	shop_code = shopChoice.value
 	time = timeChoise.value
  	comment = document.getElementById('comment').value
-	if (!shop) {
-		alert('Выберите магазин из списка и нажмите "Выбрать"')
-		return
-	}
 	if (!time) {
 		alert('Выберите желаемое время получения заказа"')
 		return

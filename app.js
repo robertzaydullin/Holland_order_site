@@ -91,21 +91,6 @@ DG.then(function () {
    fullscreenControl: false
    })
 
-   let findButton = document.getElementById('findme');
-
-   findButton.onclick = function() {myLocation};
-
-   myLocation = map.locate({setView: false, watch: true})
-   		.on('locationfound', function(e) {
-	   		DG.marker([e.latitude, e.longitude]).addTo(map);
-   			})
-   		.on('locationerror', function(e) {
-	   		DG.popup()
-		 	.setLatLng(map.getCenter())
-		 	.setContent('Доступ к определению местоположения отключён')
-		 	.openOn(map);
-   			})
-
 	shopChoice.onchange = function changeShop () {
 		map.setView(center=shops[shopChoice.value][0], zoom=16)
 	tg.MainButton.show()

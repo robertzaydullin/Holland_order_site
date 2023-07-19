@@ -497,6 +497,7 @@ DG.then(function () {
 
 function blink(element){
 	if (element.value != '') {return}
+	element.scrollIntoView()
 	element.focus()
 	element.style.backgroundColor = "#FFFFFF"
 	setTimeout(function() {

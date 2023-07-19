@@ -517,7 +517,10 @@ function blink(element){
 timeChoise.onchange = function changeTime () {
 	timeChoise.style.backgroundColor = "#FFFFFF"
 	tg.MainButton.show()
+	setTimeout(function() {
 	blink(commentChoise)
+	}, 1000)
+	
 
 }
 

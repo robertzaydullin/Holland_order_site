@@ -9,7 +9,7 @@ let commentChoise = document.getElementById('comment')
 tg.MainButton.setParams(
 	{
 	'text': 'Продолжить далее',
-	'color': '#2cab37',
+	'color': '#808080',
 	'textColor': '#FFFFFF',
 	'is_active': false,
 	'is_visible': true
@@ -520,6 +520,7 @@ function blink(element){
 timeChoise.onchange = function changeTime () {
 	timeChoise.style.backgroundColor = "#FFFFFF"
 	tg.MainButton.isActive = true
+	tg.MainButton.color = '#2cab37'
 	blink(commentChoise)
 }
 

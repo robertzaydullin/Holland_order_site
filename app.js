@@ -99,10 +99,8 @@ DG.then(function () {
 	shopChoise.onchange = function changeShop () {
 		map.setView(center=shops[shopChoise.value][0], zoom=16)
 		markerTarget=DG.marker(shops[shopChoise.value][0])
-		console.log(markerTarget)
-		
 		shops[shopChoise.value][3].openPopup()
-		
+		tg.MainButton.show()
 		blink(timeChoise)
 	}
 

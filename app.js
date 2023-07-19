@@ -459,7 +459,7 @@ DG.then(function () {
 		.addTo(map)
 		.bindPopup(shops['ЧЕХ'][1])
 
-	shops['БЕЛ'][3] = DG.marker(shops['ЧИС'][0])
+	shops['ЧИС'][3] = DG.marker(shops['ЧИС'][0])
 		.on('click', function() {
 			shopChoise.value = 'ЧИС'
 			map.setView(center=shops[shopChoise.value][0], map.getZoom())

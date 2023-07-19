@@ -6,7 +6,7 @@ let mapWidget = document.getElementById('map')
 let shopChoise = document.getElementById('selectshop')
 let commentChoise = document.getElementById('comment')
 
-tg.MainButton.setparams(
+tg.MainButton.setParams(
 	'text': 'Продолжить далее',
 	'color': '#2cab37',
 	'textColor': '#FFFFFF',

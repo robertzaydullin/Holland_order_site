@@ -9,7 +9,7 @@ let commentChoise = document.getElementById('comment')
 tg.MainButton.setParams(
 	{
 	'text': 'Продолжить далее',
-	'color': '#808080',
+	'color': '#143F6B',
 	'textColor': '#FFFFFF',
 	'is_active': false,
 	'is_visible': true

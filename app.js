@@ -7,11 +7,13 @@ let shopChoise = document.getElementById('selectshop')
 let commentChoise = document.getElementById('comment')
 
 tg.MainButton.setParams(
+	{
 	'text': 'Продолжить далее',
 	'color': '#2cab37',
 	'textColor': '#FFFFFF',
 	'is_active': false,
-	'is_visible': true	
+	'is_visible': true
+	}
 	)
 
 let timeChoise = document.getElementById('getorder-time')

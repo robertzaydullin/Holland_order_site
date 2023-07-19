@@ -6,10 +6,13 @@ let mapWidget = document.getElementById('map')
 let shopChoise = document.getElementById('selectshop')
 let commentChoise = document.getElementById('comment')
 
-
-tg.MainButton.textColor = '#FFFFFF'
-tg.MainButton.color = '#2cab37'
-tg.MainButton.isActive = false
+tg.MainButton.setparams(
+	'text': 'Продолжить далее',
+	'color': '#2cab37',
+	'textColor': '#FFFFFF',
+	'is_active': false,
+	'is_visible': true	
+	)
 
 let timeChoise = document.getElementById('getorder-time')
 timeChoise.min = new Date().toISOString().slice(0, -8)

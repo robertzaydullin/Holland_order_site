@@ -103,12 +103,6 @@ DG.then(function () {
 		
 		shops[shopChoise.value][3].openPopup()
 		
-/*
-		DG.popup()
-            .setLatLng(shops[shopChoise.value][0])
-            .setContent(shops[shopChoise.value][1])
-			.openOn(map)
-*/		
 		blink(timeChoise)
 	}
 
@@ -503,6 +497,7 @@ DG.then(function () {
 
 function blink(element){
 	if (element.value != '') {return}
+	element.focus()
 	element.style.backgroundColor = "#FFFFFF"
 	setTimeout(function() {
 	element.style.backgroundColor = "#FDFF47"

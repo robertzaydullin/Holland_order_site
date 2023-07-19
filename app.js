@@ -7,8 +7,9 @@ let shopChoise = document.getElementById('selectshop')
 let commentChoise = document.getElementById('comment')
 
 
-tg.MainButton.textColor = '#FFFFFF';
-tg.MainButton.color = '#2cab37';
+tg.MainButton.textColor = '#FFFFFF'
+tg.MainButton.color = '#2cab37'
+tg.MainButton.isActive = false
 
 let timeChoise = document.getElementById('getorder-time')
 timeChoise.min = new Date().toISOString().slice(0, -8)
@@ -100,11 +101,6 @@ DG.then(function () {
 		map.setView(center=shops[shopChoise.value][0], zoom=16)
 		markerTarget=DG.marker(shops[shopChoise.value][0])
 		shops[shopChoise.value][3].openPopup()
-		tg.MainButton.show()
-		setTimeout(function() {
-			tg.MainButton.hide()
-		}, 100)
-		
 		blink(timeChoise)
 	}
 
@@ -518,7 +514,7 @@ function blink(element){
 
 timeChoise.onchange = function changeTime () {
 	timeChoise.style.backgroundColor = "#FFFFFF"
-	tg.MainButton.show()
+	tg.MainButton.isActive = true
 	blink(commentChoise)
 }
 

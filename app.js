@@ -516,8 +516,9 @@ function blink(element){
 
 timeChoise.onchange = function changeTime () {
 	timeChoise.style.backgroundColor = "#FFFFFF"
-	blink(commentChoise)
 	tg.MainButton.show()
+	blink(commentChoise)
+
 }
 
 Telegram.WebApp.onEvent('mainButtonClicked', function () { //тут сообщение отправляется в тг

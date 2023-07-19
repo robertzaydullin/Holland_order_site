@@ -101,6 +101,7 @@ DG.then(function () {
 		markerTarget=DG.marker(shops[shopChoise.value][0])
 		shops[shopChoise.value][3].openPopup()
 		tg.MainButton.show()
+		tg.MainButton.hide()
 		blink(timeChoise)
 	}
 
